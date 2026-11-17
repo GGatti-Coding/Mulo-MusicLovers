@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Mulo Music Player - Phase 3 UI Mock-Up
+    Team: Music Lovers (Group 10)
+    Jonah Rideout, Ahmed Yassine Messaoudi, Simon Waites,
+    Guilherme Gatti, Jon Ibarlin
+    Page: Search (with pinned player)
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mulo - Search (Playing)</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- Pinned player: stays at the top while the page scrolls (ADR 2) -->
+    <section class="pinned-player" aria-label="Now playing">
+      <div class="player-box">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 18V5l12-2v13"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="16" r="3"/>
+        </svg>
+        <p>Embedded YouTube player</p>
+      </div>
+      <div class="mini-progress"><span style="width: 38%"></span></div>
+      <div class="mini-player-bar">
+        <a class="mini-player-text" href="now-playing.html" aria-label="Open Now Playing">
+          <p class="song-title">Blinding Lights</p>
+          <p class="song-artist">The Weeknd</p>
+        </a>
+        <button class="icon-button" type="button" aria-label="Pause">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="6" y="4" width="4" height="16" style="fill: currentColor"/>
+            <rect x="14" y="4" width="4" height="16" style="fill: currentColor"/>
+          </svg>
+        </button>
+        <button class="icon-button" type="button" aria-label="Next song">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points="5 4 15 12 5 20 5 4" style="fill: currentColor"/>
+            <line x1="19" y1="5" x2="19" y2="19"/>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <main>
+
+      <form class="search-field" action="search-playing.html" role="search">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        <label class="visually-hidden" for="search-input">Search songs, artists or playlists</label>
+        <input id="search-input" name="q" type="search" value="the weeknd" placeholder="Search songs, artists, playlists">
+        <button class="clear-button" type="reset" aria-label="Clear search">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </form>
+
+      <div class="chip-row">
+        <button class="chip selected" type="button">Songs</button>
+        <button class="chip" type="button">Artists</button>
+        <button class="chip" type="button">Playlists</button>
+      </div>
+
+      <section>
+        <h2 class="results-label">Top results</h2>
+        <div class="song-list">
+
+          <div class="song-row">
+            <a class="song-link" href="now-playing.html">
+              <div class="song-art art-7">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <div class="song-text">
+                <p class="song-title">Blinding Lights</p>
+                <p class="song-artist">The Weeknd</p>
+              </div>
+            </a>
+            <button class="more-button" type="button" aria-label="More options for Blinding Lights">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="5" cy="12" r="1.6"/>
+                <circle cx="12" cy="12" r="1.6"/>
+                <circle cx="19" cy="12" r="1.6"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="song-row">
+            <a class="song-link" href="now-playing.html">
+              <div class="song-art art-5">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <div class="song-text">
+                <p class="song-title">Save Your Tears</p>
+                <p class="song-artist">The Weeknd</p>
+              </div>
+            </a>
+            <button class="more-button" type="button" aria-label="More options for Save Your Tears">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="5" cy="12" r="1.6"/>
+                <circle cx="12" cy="12" r="1.6"/>
+                <circle cx="19" cy="12" r="1.6"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="song-row">
+            <a class="song-link" href="now-playing.html">
+              <div class="song-art art-6">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <div class="song-text">
+                <p class="song-title">Starboy</p>
+                <p class="song-artist">The Weeknd</p>
+              </div>
+            </a>
+            <button class="more-button" type="button" aria-label="More options for Starboy">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="5" cy="12" r="1.6"/>
+                <circle cx="12" cy="12" r="1.6"/>
+                <circle cx="19" cy="12" r="1.6"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <nav class="tab-bar" aria-label="Main navigation">
+      <a class="tab-item" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Home
+      </a>
+      <a class="tab-item active" href="search-playing.html" aria-current="page">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        Search
+      </a>
+      <a class="tab-item" href="community.html">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Community
+      </a>
+      <a class="tab-item" href="library.html">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="5" y1="4" x2="5" y2="20"/>
+          <line x1="10" y1="4" x2="10" y2="20"/>
+          <path d="M15 4l5 16"/>
+        </svg>
+        Library
+      </a>
+    </nav>
+  </div>
+</body>
+</html>

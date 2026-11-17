@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Mulo Music Player - Phase 3 UI Mock-Up
+    Team: Music Lovers (Group 10)
+    Jonah Rideout, Ahmed Yassine Messaoudi, Simon Waites,
+    Guilherme Gatti, Jon Ibarlin
+    Page: Now Playing
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mulo - Now Playing</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app" style="padding-bottom: 24px;">
+
+    <header class="np-top">
+      <!-- Close: leaves Now Playing and shrinks the player to the top (ADR 2) -->
+      <a class="icon-button" href="search-playing.html" aria-label="Close Now Playing">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="6 9 12 15 18 9"/>
+        </svg>
+      </a>
+      <div class="np-title-block">
+        <p class="np-label">Now Playing</p>
+        <p class="np-from">From Late Night Drive</p>
+      </div>
+      <button class="icon-button" type="button" aria-label="More options">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="5" cy="12" r="1.6" style="fill: currentColor; stroke: none"/>
+          <circle cx="12" cy="12" r="1.6" style="fill: currentColor; stroke: none"/>
+          <circle cx="19" cy="12" r="1.6" style="fill: currentColor; stroke: none"/>
+        </svg>
+      </button>
+    </header>
+
+    <!-- Player placeholder (the real app uses the YouTube IFrame player here) -->
+    <div class="player-box">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9 18V5l12-2v13"/>
+        <circle cx="6" cy="18" r="3"/>
+        <circle cx="18" cy="16" r="3"/>
+      </svg>
+      <p>Embedded YouTube player</p>
+    </div>
+
+    <main class="np-body" style="padding-top: 0;">
+
+      <div class="np-info">
+        <div>
+          <h1 class="np-song">Blinding Lights</h1>
+          <p class="np-artist">The Weeknd</p>
+        </div>
+        <button class="like-button" type="button" aria-label="Unlike this song">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </button>
+      </div>
+
+      <div>
+        <label class="visually-hidden" for="seek">Seek</label>
+        <input class="slider" id="seek" type="range" min="0" max="200" value="72">
+        <div class="time-row">
+          <span>1:12</span>
+          <span>3:20</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn on" type="button" aria-label="Shuffle (on)">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="16 3 21 3 21 8"/>
+            <line x1="4" y1="20" x2="21" y2="3"/>
+            <polyline points="21 16 21 21 16 21"/>
+            <line x1="15" y1="15" x2="21" y2="21"/>
+            <line x1="4" y1="4" x2="9" y2="9"/>
+          </svg>
+        </button>
+        <button class="control-btn strong" type="button" aria-label="Previous song">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points="19 20 9 12 19 4 19 20" style="fill: currentColor"/>
+            <line x1="5" y1="19" x2="5" y2="5"/>
+          </svg>
+        </button>
+        <button class="play-btn" type="button" aria-label="Pause">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="6" y="4" width="4" height="16"/>
+            <rect x="14" y="4" width="4" height="16"/>
+          </svg>
+        </button>
+        <button class="control-btn strong" type="button" aria-label="Next song">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polygon points="5 4 15 12 5 20 5 4" style="fill: currentColor"/>
+            <line x1="19" y1="5" x2="19" y2="19"/>
+          </svg>
+        </button>
+        <button class="control-btn" type="button" aria-label="Repeat (off)">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <polyline points="17 1 21 5 17 9"/>
+            <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+            <polyline points="7 23 3 19 7 15"/>
+            <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="volume-row">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        </svg>
+        <label class="visually-hidden" for="volume">Volume</label>
+        <input class="slider" id="volume" type="range" min="0" max="100" value="62">
+      </div>
+
+      <section>
+        <div class="section-header">
+          <h2 class="section-title">Up next</h2>
+          <button class="text-button" type="button">Queue</button>
+        </div>
+        <div class="song-list">
+
+          <div class="song-row">
+            <a class="song-link" href="now-playing.html">
+              <div class="song-art art-3">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <div class="song-text">
+                <p class="song-title">Levitating</p>
+                <p class="song-artist">Dua Lipa</p>
+              </div>
+            </a>
+            <button class="more-button" type="button" aria-label="More options for Levitating">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="5" cy="12" r="1.6"/>
+                <circle cx="12" cy="12" r="1.6"/>
+                <circle cx="19" cy="12" r="1.6"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="song-row">
+            <a class="song-link" href="now-playing.html">
+              <div class="song-art art-4">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 18V5l12-2v13"/>
+                  <circle cx="6" cy="18" r="3"/>
+                  <circle cx="18" cy="16" r="3"/>
+                </svg>
+              </div>
+              <div class="song-text">
+                <p class="song-title">Espresso</p>
+                <p class="song-artist">Sabrina Carpenter</p>
+              </div>
+            </a>
+            <button class="more-button" type="button" aria-label="More options for Espresso">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="5" cy="12" r="1.6"/>
+                <circle cx="12" cy="12" r="1.6"/>
+                <circle cx="19" cy="12" r="1.6"/>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

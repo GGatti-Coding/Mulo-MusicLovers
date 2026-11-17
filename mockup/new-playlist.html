@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    Mulo Music Player - Phase 3 UI Mock-Up
+    Team: Music Lovers (Group 10)
+    Jonah Rideout, Ahmed Yassine Messaoudi, Simon Waites,
+    Guilherme Gatti, Jon Ibarlin
+    Page: New Playlist
+  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mulo - New Playlist</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app">
+    <main>
+
+      <div class="back-row">
+        <a class="icon-button" href="library.html" aria-label="Back to Library">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="19" y1="12" x2="5" y2="12"/>
+            <polyline points="12 19 5 12 12 5"/>
+          </svg>
+        </a>
+      </div>
+
+      <header class="page-header">
+        <div>
+          <h1 class="page-title">New playlist</h1>
+          <p class="page-subtitle">Give your playlist a name and choose who can see it.</p>
+        </div>
+      </header>
+
+      <!-- In Phase 4 this form will save the playlist to Supabase -->
+      <form class="form-card" action="library.html" method="get">
+
+        <div class="field">
+          <label for="playlist-name">Playlist name</label>
+          <input id="playlist-name" name="name" type="text" value="Gym Mix" required>
+        </div>
+
+        <div class="field">
+          <label for="playlist-description">Description (optional)</label>
+          <input id="playlist-description" name="description" type="text" value="High-energy songs for workouts">
+        </div>
+
+        <div class="field">
+          <label for="playlist-visibility">Who can see it</label>
+          <select id="playlist-visibility" name="visibility">
+            <option value="me" selected>Only me</option>
+            <option value="friends">Friends</option>
+            <option value="everyone">Everyone</option>
+          </select>
+        </div>
+
+        <div class="toggle-row">
+          <label for="friends-add">Let friends add songs</label>
+          <div class="toggle">
+            <input id="friends-add" name="friends_add" type="checkbox" checked>
+            <span class="switch"></span>
+          </div>
+        </div>
+
+        <button class="btn" type="submit">Create playlist</button>
+
+      </form>
+
+    </main>
+
+    <nav class="tab-bar" aria-label="Main navigation">
+      <a class="tab-item" href="index.html">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        Home
+      </a>
+      <a class="tab-item" href="search.html">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+        Search
+      </a>
+      <a class="tab-item" href="community.html">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        Community
+      </a>
+      <a class="tab-item active" href="library.html" aria-current="page">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <line x1="5" y1="4" x2="5" y2="20"/>
+          <line x1="10" y1="4" x2="10" y2="20"/>
+          <path d="M15 4l5 16"/>
+        </svg>
+        Library
+      </a>
+    </nav>
+  </div>
+</body>
+</html>
